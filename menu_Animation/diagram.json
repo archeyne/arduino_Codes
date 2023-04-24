@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Alan Cheyne",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 4.66, "left": 16.66, "attrs": {} },
+    { "type": "board-ssd1306", "id": "oled1", "top": 227.94, "left": 147.09, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 182.07,
+      "left": 327.33,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.2", "oled1:GND", "black", [ "v21.51", "h-4.42" ] ],
+    [ "uno:5V", "oled1:VCC", "red", [ "v16.17", "h14.42" ] ],
+    [ "oled1:SCL", "uno:A5", "green", [ "v-12.73", "h72.26" ] ],
+    [ "oled1:SDA", "uno:A4", "green", [ "v-19.4", "h53.1" ] ],
+    [ "oled1:GND", "btn1:2.l", "black", [ "v-16.97", "h2.73" ] ],
+    [ "btn1:1.l", "uno:7", "green", [ "h-12.65", "v-210.3", "h-109.33" ] ]
+  ],
+  "dependencies": {}
+}
